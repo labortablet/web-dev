@@ -1,0 +1,10 @@
+labor_backend:
+    resource: "@LaborBackendBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    pattern:  /login
+    defaults: { _controller: LaborBackendBundle:Secured:login }
+    
+logout:
+    path:   /logout

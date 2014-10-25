@@ -1,0 +1,97 @@
+{# src/Labor/BackendBundle/Resources/views/index.html.twig #}
+
+{% extends 'LaborBackendBundle:Default:base.html.twig' %}
+
+{% block body %}
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+
+<div class="border turkis"> </br>
+<div id="tabs">
+	<h2> Register</h2>
+	<ul id="TabsUl">
+	<li class="section">
+		<h4> Groups </h4>
+		<a href="#tabs-groups">
+			<p> Phasellus at est enim. Sed fermentum purus non mollis congue. .</p>
+		</a>
+	</li>
+	<li class="section">
+		<h4> Projekts </h4>
+		<a href="#tabs-projekts">
+			<p> Phasellus at est enim. Sed fermentum purus non mollis congue. .</p>
+		</a>
+	</li>
+	<li class="section">
+		<h4> Experiments </h4>
+		<a href="#tabs-experiment">
+			<p> Phasellus at est enim. Sed fermentum purus non mollis congue. .</p>
+		</a>
+	</li>
+	</ul>
+	<div id="tabs-groups"> 
+		<ul class="RightPanel"> 
+			<li> 
+			<a href="addGroup/">
+				<img height="25" width="25" src="https://cdn4.iconfinder.com/data/icons/meBaze-Freebies/512/add.png" />
+			</a>	
+			</li>
+		</ul>
+		<div class="boxer">
+
+			<ul class="box-row">
+				<li class="box">#</li>
+				<li class="box">Name</li>
+				<li class="box">Description</li>
+				<li class="box">Create Date</li>
+				<li class="box"></li>
+				<li class="box"></li>				
+			</ul>
+			{% for y in groups %}
+			<ul class="box-row">
+				<li class="box">{{ y.id }}</li>
+				<li class="box">{{ y.name }}</li>
+				<li class="box">{{ y.description }}</li>
+				<li class="box">{{ y.createDate|date("d.m.Y") }}</li>
+				<li class="box"><img height="13" width="13" src="http://icons.iconarchive.com/icons/custom-icon-design/office/256/edit-icon.png" /></li>
+				<li class="box"><a href="/web/remove/0/{{ y.id }}"><img height="13" width="13" src="http://icons.iconarchive.com/icons/custom-icon-design/office/256/delete-icon.png" /> </a></li>
+			</ul>
+			{% endfor %}
+		</div>
+	</div>	
+	<div id="tabs-projekts"> 
+		<div class="boxer">
+			<ul class="box-row">
+				<li class="box">#</li>
+				<li class="box">Name</li>
+				<li class="box">Description</li>
+				<li class="box">Create Date</li>
+				<li class="box"></li>
+			</ul>
+			<ul class="box-row">
+				<li class="box">1</li>
+				<li class="box">C-Track</li>
+				<li class="box">Phasellus at est enim. Sed fermentum purus</li>
+				<li class="box">02.03.2014</li>
+				<li class="box">b</li>
+			</ul>
+			<ul class="box-row">
+				<li class="box">1</li>
+				<li class="box">C-Track</li>
+				<li class="box">Phasellus at est enim. Sed fermentum purus</li>
+				<li class="box">02.03.2014</li>
+				<li class="box">b</li>
+			</ul>
+		</div>
+	</div>	
+	<div id="tabs-experiment"> 
+		Experiments
+	</div>	
+</div>			
+</div>
+
+
+{% endblock %}

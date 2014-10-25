@@ -1,0 +1,97 @@
+{# src/Labor/BackendBundle/Resources/views/base.html.twig #}
+
+<html>
+<head>
+	
+</head>
+<link rel="stylesheet" href="http://lablet.vega.uberspace.de/web/css/reset.css" type="text/css">
+<link rel="stylesheet" href="http://lablet.vega.uberspace.de/web/css/main.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+
+<script>
+$(document).ready(function(){
+  $(".messages").click(function(){
+    $("#MsgBox").slideToggle();
+  });
+});
+</script>
+
+<body>
+
+<div id="Header">  
+	<div id="Spalte">
+		<div id="Logo"> Physik Department</div>
+		<ul id="NavMenu"> 
+			<li class="borderFix"> <a href="/web/">Dashboard </a></li>
+			<li> <a href="/web/register">Register</a> </li>
+			<li> <a href="/web/register">Import</a></li>
+			<li class="borderFix spalte01 messages"> <img src="http://lablet.vega.uberspace.de/web/images/messages.png" /> </li>
+
+			<li class="borderFix"> <a href="/web/logout"><img src="http://lablet.vega.uberspace.de/web/images/logoutbutton.png" /></a><div class="msg">6</div></li>
+		</ul>
+		<div id="MsgBox"> 
+			<ul> 
+				<li>
+					<b> Message subject </b>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non.. </p>
+				</li>
+				<li>
+					<b> Message subject </b>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non urna non.. </p>
+				</li>
+				<li>
+					<b> Message subject </b>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non urna non.. </p>
+				</li>	
+				<li>
+					<a href=""><b> All messages </b></a>
+				</li>	
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="MainContent"> 
+<div id="InfoBoard"> 
+	<div id="left"> Hauptseite > Dashboard </div>
+	<div id="right"> 
+		<input type="text" placeholder="Suchbegriff.."/> 
+		<input type="submit" value="los" /> 
+	</div>
+</div>
+<div id="MainLeft"> 
+	<div class="border lightred"> 
+		<img class="profibild" width="35" height="35" src="http://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png" />
+		<div class="begruss">
+			<h5> Hello, <b>{{ app.user.firstname }}!</b></h5>
+			<a href="/web/profil"> Profil </a>
+			<a href=""> Messages </a>
+			<a href=""> Settings </a>
+		</div>
+	</div>
+	<div class="border gray"> 
+		<h3> Inspritation </h3> 
+		<ul class="navigator">
+			<li>Testseite</li>
+			<li>Seitetest</li>
+		</ul>
+	</div>
+	<div class="border gray"> 
+		<h3> Anfrage </h3> 
+	</div>
+</div>
+<div id="Content"> 
+
+{% block body %} {% endblock %}
+
+</div>
+</div>
+
+
+
+</body>
+</html>

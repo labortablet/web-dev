@@ -1,0 +1,23 @@
+{# src/Labor/BackendBundle/Resources/views/index.html.twig #}
+
+{% extends 'LaborBackendBundle:Default:base.html.twig' %}
+
+{% block body %}
+
+<div class="border lightyellow"> </br>
+	<div id="Profil">
+	<img src="http://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png" height="100" width="100" />
+	</div>
+	<div id="ProfilDetail">
+	<h2> {{ app.user.firstname }} {{ app.user.lastname }}</b></h2>
+	<ul> </br>
+	<li> Register date: <b>{{ app.user.createdate|date('Y-m-d') }}</b></li></br>
+	<li> E-mail: <b>{{ app.user.email }}</b></li></br>
+	<li> Group-Id: <b> </li></br>
+	</ul>
+	<p> </p>  <b></b>
+	</div>
+</div>
+
+
+{% endblock %}

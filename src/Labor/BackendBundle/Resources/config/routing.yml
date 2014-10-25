@@ -1,0 +1,27 @@
+labor_backend_dashboard:
+    pattern:  /
+    defaults: { _controller: LaborBackendBundle:Default:index }
+
+labor_backend_register:
+    pattern:  /register/
+    defaults: { _controller: LaborBackendBundle:Default:register }
+
+labor_backend_import:
+    pattern:  /import/
+    defaults: { _controller: LaborBackendBundle:Default:index }
+
+_secured_area:
+    resource: "@LaborBackendBundle/Controller/SecuredController.php"
+    type:     annotation
+
+labor_profil_show:
+    path:      /profil/
+    defaults:  { _controller: LaborBackendBundle:Default:profil }
+
+labor_add_group:
+    path:      /register/addGroup/
+    defaults:  { _controller: LaborBackendBundle:Default:addGroup }
+
+labor_backend_remove:
+    path:      /remove/{type}/{id}
+    defaults:  { _controller: LaborBackendBundle:Default:remove }

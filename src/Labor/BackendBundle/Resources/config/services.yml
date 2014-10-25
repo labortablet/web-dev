@@ -1,0 +1,7 @@
+parameters:
+#    labor_backend.example.class: Labor\BackendBundle\Example
+
+services:
+#    labor_backend.example:
+#        class: %labor_backend.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

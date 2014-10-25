@@ -1,0 +1,28 @@
+{# src/Labor/BackendBundle/Resources/views/index.html.twig #}
+
+{% extends 'LaborBackendBundle:Default:base.html.twig' %}
+
+{% block body %}
+
+<div class="border turkis"> </br>
+	<h2> Add Group</h2>	
+	<p> You can add here groups. </p>	
+
+	    {{ form_errors(form) }}
+
+	    <div class="borderForm">
+	    {{ form_start(form) }}
+	        {{ form_label(form.name) }}</br>
+	        {{ form_errors(form.name) }}
+	        {{ form_widget(form.name) }}</br>
+	        {{ form_label(form.description) }}</br>
+	        {{ form_errors(form.description) }}
+	        {{ form_widget(form.description) }}
+	    {{ form_end(form) }}    
+	    </div>
+
+
+</div>
+
+
+{% endblock %}

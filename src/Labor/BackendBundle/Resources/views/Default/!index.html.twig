@@ -1,0 +1,96 @@
+<html>
+<head>
+	
+</head>
+<link rel="stylesheet" href="http://lablet.vega.uberspace.de/web/css/reset.css" type="text/css">
+<link rel="stylesheet" href="http://lablet.vega.uberspace.de/web/css/main.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".messages").click(function(){
+    $("#MsgBox").slideToggle();
+  });
+});
+</script>
+
+<body>
+
+<div id="Header">  
+	<div id="Spalte">
+		<div id="Logo"> Physik Department</div>
+		<ul id="NavMenu"> 
+			<li class="borderFix"> Dashboard </li>
+			<li> Register </li>
+			<li> Import </li>
+			<li class="borderFix spalte01 messages"> <img src="http://lablet.vega.uberspace.de/web/images/messages.png" /> </li>
+
+			<li class="borderFix"> <img src="http://lablet.vega.uberspace.de/web/images/logoutbutton.png" /><div class="msg">6</div></li>
+		</ul>
+		<div id="MsgBox"> 
+			<ul> 
+				<li>
+					<b> Message subject </b>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non.. </p>
+				</li>
+				<li>
+					<b> Message subject </b>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non urna non.. </p>
+				</li>
+				<li>
+					<b> Message subject </b>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non urna non.. </p>
+				</li>	
+				<li>
+					<a href=""><b> All messages </b></a>
+				</li>	
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="MainContent"> 
+<div id="InfoBoard"> 
+	<div id="left"> Hauptseite > Dashboard </div>
+	<div id="right"> 
+		<input type="text" placeholder="Suchbegriff.."/> 
+		<input type="submit" value="los" /> 
+	</div>
+</div>
+<div id="MainLeft"> 
+	<div class="border lightred"> 
+		<img class="profibild" src="http://lablet.vega.uberspace.de/web/images/profibild.png" />
+		<div class="begruss">
+			<h5> Hello, <b>tester!</b></h5>
+			<a href=""> Profil </a>
+			<a href=""> Messages </a>
+			<a href=""> Settings </a>
+		</div>
+	</div>
+	<div class="border gray"> 
+		<h3> Inspritation </h3> 
+		<ul class="navigator">
+			<li>Testseite</li>
+			<li>Seitetest</li>
+		</ul>
+	</div>
+	<div class="border gray"> 
+		<h3> Anfrage </h3> 
+	</div>
+</div>
+<div id="Content"> 
+<div class="border navyblue"> </br>
+	<h2> Wilkommen in Physik Department</h2>
+	<p> Nam laoreet dui felis, nec porta lectus molestie non. Aliquam erat volutpat. Nam convallis pulvinar felis vitae facilisis. Morbi sit amet fermentum nisi, quis condimentum orci. Nunc sagittis, mauris id consequat feugiat, dolor sem consectetur mauris, vel auctor ipsum leo in purus. Phasellus lacus orci, condimentum dictum erat et, vulputate condimentum sapien. Morbi hendrerit nulla dolor, quis molestie risus dignissim eget.
+	 </br> </br> Ihre Entwickler-Team</p>  
+</div>
+<div class="border lightyellow"> </div>
+<div class="border turkis"> </div>
+
+</div>
+</div>
+
+
+
+</body>
+</html>
